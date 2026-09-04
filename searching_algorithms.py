@@ -1,14 +1,31 @@
+# class LinearSearch:
+#     def find_number(self, n):
+#         for i in range(1, n+1):
+#             print(i)
+#             ans = str(input(f"thinking number y/n: "))
+#             if ans == 'y':
+#                 print("Win!")
+#                 return i
+#             elif ans == 'n':
+#                 print("Not found")
+# sol = LinearSearch()
+# print(sol.find_number(10))
+#
+#
+
+myList = [1,3,4,6,7,8,10,12,23,45,56,78,99]
 class LinearSearch:
-    def find_number(self, n):
-        for i in range(1, n+1):
-            print(i)
-            ans = str(input("thinking number y/n: "))
-            if ans == 'y':
-                print("Win!")
-                return i
-            elif ans == 'n':
-                print("Not found")
+    def find_number(self, list1, target):
+        for i in range(len(list1)):
+            ans = input(f"thinkung number: {n}? (y/n) ")
+
+            if list1[i] == target:
+                return list1[i]
+
+
+        return None
+
 sol = LinearSearch()
-print(sol.find_number(10))
+print(sol.find_number(myList, 7))
 
 
