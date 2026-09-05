@@ -48,7 +48,7 @@ sol = BinarySearch()
 print(sol.binary_search_f(list1, 7))
 
 
-class Solution(object):
+class Solution2(object):
     def searchInsert(self, nums, target):
         low = 0
         high = len(nums) - 1
@@ -65,6 +65,31 @@ class Solution(object):
                 low = mid + 1
 
         return low
+
+
+class Solution1(object):
+    def mySqrt(self, x):
+        if x < 2:
+            return x
+
+        low = 0
+        high = x
+        ans = 0
+
+        while low <= high:
+            mid = (low + high) // 2
+
+            if mid * mid == x:
+                return mid
+
+            elif mid * mid < x:
+                ans = mid
+                low = mid + 1
+
+            else:
+                high = mid - 1
+
+        return ans
 
 
 
